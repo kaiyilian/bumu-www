@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>关于我们</title>
+    <link rel="icon" href="../../image/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../image/favicon.ico" type="image/x-icon"/>
+
+    <!--jquery 引用-->
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <!--bootstrap样式-->
+    <link href="../../css/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!--公共-->
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/bumu/header.css" rel="stylesheet">
+    <link href="../../css/bumu/footer.css" rel="stylesheet">
+    <script src="../../js/common.js"></script>
+    <script src="../../js/bumu/bumu.js"></script>
+    <script src="../../js/bumu/header.js"></script>
+    <script src="../../js/bumu/footer.js"></script>
+    <!--本页面-->
+    <link href="../../css/pages/about_us.css" rel="stylesheet">
+    <script src="../../js/pages/about_us.js"></script>
+
+</head>
+<body>
+
+<header>
+
+    <div class="row line">
+
+        <div class="col-xs-3">您好，欢迎光临不木官网！</div>
+
+        <div class="col-xs-3 pull-right">
+            <span class="txt" onclick="header.goKeySass()">K-Saas平台</span>
+            <span class="btn btn-sm btn-primary pull-right" onclick="header.goTrailApply()">申请试用</span>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="cpy_info col-xs-3" data-type="index" onclick="header.goIndex()">
+            <img class="cpy_logo" src="../../image/logo.png"/>
+            <span class="cpy_name">招才进宝</span>
+        </div>
+
+        <div class="navbar_container col-xs-9">
+
+            <div class="col-xs-2 navbar-btn index" data-type="index">
+                首页
+            </div>
+
+            <div class="col-xs-2 navbar-btn social" data-type="social">
+                社保大厅
+            </div>
+
+            <div class="col-xs-2 navbar-btn entry" data-type="entry">
+                一键入职
+            </div>
+
+            <div class="col-xs-2 navbar-btn commerce" data-type="commerce">
+                商业保险
+            </div>
+
+            <div class="col-xs-2 navbar-btn salary" data-type="salary">
+                薪资筹划
+            </div>
+
+            <div class="col-xs-2 navbar-btn about_us active" data-type="about_us">
+                关于我们
+            </div>
+
+            <!--<div class="col-xs-2 cpy_phone">-->
+                <!--<span>18762875446（孙经理）</span>-->
+            <!--</div>-->
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="content">
+
+    <div class="block company_info_container">
+
+        <div class="cpm_info">
+
+            <div class="cpm_name">不木网络科技有限公司</div>
+
+            <div class="cpm_intro">
+                苏州不木网络科技有限公司（旗下软件“招才进宝”）是一家以科技配置人力新资源，结合传统人力资源与新兴互联网的创新企业。
+                创始团队深耕人力资源行业十五年，在实践中以全新的商业模式配合互联网技术，为HR做减法。依托对行业的深入理解及业界领先的招才进宝“云+SaaS”软件为企业提供人才管理、五险一金、薪酬管理、商业保险等一站式人力资源在线管理服务，致力于让企业HR在日常工作变的更简单高效。
+            </div>
+
+        </div>
+    </div>
+
+    <div class="block block_1">
+
+        <div class="cpm_advantage">
+
+            <div class="advantage_item">
+
+                <div class="advantage_img">
+                    <img src="../../image/about_us/about_us_1.png"/>
+                </div>
+
+                <div class="advantage_info">
+
+                    <span>企业历史</span>
+                    <span class="count">15</span>
+                    <span>年</span>
+
+                </div>
+
+            </div>
+
+            <div class="advantage_item">
+
+                <div class="advantage_img">
+                    <img src="../../image/about_us/about_us_2.png"/>
+                </div>
+
+                <div class="advantage_info">
+
+                    <span>累计服务客户</span>
+                    <span class="count">3000</span>
+                    <span>家</span>
+
+                </div>
+
+            </div>
+
+            <div class="advantage_item">
+
+                <div class="advantage_img">
+                    <img src="../../image/about_us/about_us_3.png"/>
+                </div>
+
+                <div class="advantage_info">
+
+                    <span>分支机构超过</span>
+                    <span class="count">35</span>
+                    <span>家</span>
+
+                </div>
+
+            </div>
+
+            <div class="advantage_item">
+
+                <div class="advantage_img">
+                    <img src="../../image/about_us/about_us_4.png"/>
+                </div>
+
+                <div class="advantage_info">
+
+                    <span>拥有蓝领员工</span>
+                    <span class="count">160000</span>
+                    <span>人</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cpm_culture">
+
+            <div class="cpm_culture_item">
+
+                <span class="title">团队文化</span>
+                <span class="txt">团队至上、拼搏进取、组织严谨</span>
+                <span class="txt">权责分明、纪律第一、分享协作</span>
+
+            </div>
+
+            <div class="cpm_culture_item">
+
+                <span class="title">执行文化</span>
+                <span class="txt">不伐木作屋，焉知木之所能用也</span>
+
+            </div>
+
+            <div class="cpm_culture_item">
+
+                <span class="title">经营理念 · 客户至上</span>
+                <span class="txt">了解客户的需求</span>
+                <span class="txt">超越客户的期望</span>
+                <span class="txt">献身于最高品质的客户服务</span>
+
+            </div>
+
+            <div class="cpm_culture_item">
+
+                <span class="title">经营理念 · 员工第一</span>
+                <span class="txt">给予员工最充分的尊重和发展空间</span>
+                <span class="txt">让员工从工作中获得成就感和使命感</span>
+                <span class="txt">营造一个充满机遇、高效务实、激情奋进的创业环境</span>
+
+            </div>
+
+            <div class="cpm_culture_hope">
+                <span class="title">愿景</span>
+                <span class="txt">最专业便捷的人力资源自助管理平台</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block our_team_container">
+
+        <div class="title_container">
+            <div class="title">我们的团队</div>
+        </div>
+
+        <div class="team_list">
+
+            <div class="team_item">
+
+                <div class="team_leader_img">
+                    <img src="../../image/about_us/team_leader_1.png"/>
+                </div>
+
+                <div class="team_leader_info">
+
+                    <div class="team_leader_name">高萍 Grace Gao</div>
+                    <div class="team_leader_post">负责商务及品牌外延</div>
+                    <div class="icon">
+                        <div class="icon_1"></div>
+                    </div>
+                    <div class="team_leader_intro">
+                        不木网络创始人。长江商学院EMBA，曾任汇思集团董事、高级合伙人，期间内控BPO研究与业务发展新模式，
+                        外拓人力资源产业链整合与并购。历经中国人力资源市场风云变幻，市场嗅觉敏锐。
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="team_item">
+
+                <div class="team_leader_img">
+                    <img src="../../image/about_us/team_leader_2.png"/>
+                </div>
+
+                <div class="team_leader_info">
+
+                    <div class="team_leader_name">高门中 Shine Gao</div>
+                    <div class="team_leader_post">不木网络高级顾问</div>
+                    <div class="icon">
+                        <div class="icon_1"></div>
+                    </div>
+                    <div class="team_leader_intro">
+                        苏州汇思人力资源集团总裁、集团董事长、创始人，
+                        汇思人力资源研究所所长。中欧国际工商学院EMBA，中国就业促进会副会长。
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="team_item">
+
+                <div class="team_leader_img">
+                    <img src="../../image/about_us/team_leader_3.png"/>
+                </div>
+
+                <div class="team_leader_info">
+
+                    <div class="team_leader_name">潘启敏 Miny Pan</div>
+                    <div class="team_leader_post">负责商务及团队架构</div>
+                    <div class="icon">
+                        <div class="icon_1"></div>
+                    </div>
+                    <div class="team_leader_intro">
+                        毕业于德国University of Erlangen Nuermberg大学。十年Chroma集团（台湾上市）人事管理经验。
+                        第五季国际贸易公司创始人。苏州园区云彩飞计划创业辅导导师。
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="team_item">
+
+                <div class="team_leader_img">
+                    <img src="../../image/about_us/team_leader_4.png"/>
+                </div>
+
+                <div class="team_leader_info">
+
+                    <div class="team_leader_name">王宇星 Allen Wang</div>
+                    <div class="team_leader_post">负责产品研发</div>
+                    <div class="icon">
+                        <div class="icon_1"></div>
+                    </div>
+                    <div class="team_leader_intro">
+                        十年系统架构师与技术总监。精通J2EE、Linux、HTML5、Android开发环境。
+                        作为一个非典型性工程师，兼有程序设计的严谨与开明睿智的情怀。
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block contact_us_container">
+
+        <div class="title_container">
+            <div class="title">联系我们</div>
+            <div class="sec_title">
+                我们已经为超过5000家企业提供服务和产品，想获得更多优质、高效、贴心的服务？
+                那就赶快联系我们吧 ! 立即为您解答！
+            </div>
+        </div>
+
+        <div class="contact_us_method_container">
+
+            <div class="method_item">
+
+                <div class="method_img">
+                    <img src="../../image/about_us/contact_method_1.png"/>
+                </div>
+
+                <div class="name">苏州工业园区汇思BPO研究中心</div>
+
+            </div>
+
+            <div class="method_item">
+
+                <div class="method_img">
+                    <img src="../../image/about_us/contact_method_2.png"/>
+                </div>
+
+                <div class="name">13915581423</div>
+
+            </div>
+
+            <div class="method_item">
+
+                <div class="method_img">
+                    <img src="../../image/about_us/contact_method_3.png"/>
+                </div>
+
+                <div class="name">support@bumuyun.com</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <div class="foot_1">
+
+        <div class="side left_side col-xs-4">
+
+            <div class="line">
+                <span class="btn_nav" data-type="about_us">关于我们</span>
+                <span class="btn_nav" data-type="join_us">加入我们</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="../../image/icon_footer_location.png"/>
+                </span>
+                <span class="txt">集团总部：苏州工业园区汇思BPO研究中心</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="../../image/icon_footer_phone.png"/>
+                </span>
+                <span class="txt">销售热线：400 -671 -0710</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                     <img src="../../image/icon_footer_email.png"/>
+                </span>
+                <span class="txt">联系邮箱：support@bumuyun.com</span>
+            </div>
+
+        </div>
+
+        <div class="side content_side col-xs-5">
+
+           <span class="item" data-type="social">
+                <span class="func_img">
+                    <img src="../../image/icon_footer_social_insurance.png"/>
+                </span>
+                <span class="func_name">社保大厅</span>
+            </span>
+
+            <span class="item" data-type="commerce">
+                <span class="func_img">
+                    <img src="../../image/icon_footer_comerce_insurance.png"/>
+                </span>
+                <span class="func_name">商业保险</span>
+            </span>
+
+            <span class="item" data-type="entry">
+                <span class="func_img">
+                    <img src="../../image/icon_footer_entry.png"/>
+                </span>
+                <span class="func_name">人事平台</span>
+            </span>
+
+            <span class="item" data-type="salary">
+                <span class="func_img">
+                    <img src="../../image/icon_footer_salary.png"/>
+                </span>
+                <span class="func_name">薪资筹划</span>
+            </span>
+
+        </div>
+
+        <div class="side right_side col-xs-3">
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="../../image/icon_footer_qrcode_app.png"/>
+                </span>
+
+                <span class="qrcode_name">app</span>
+            </span>
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="../../image/icon_footer_qrcode_weixin.png"/>
+                </span>
+
+                <span class="qrcode_name">微信</span>
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="foot_2">
+
+        <div class="copyright">
+            Copyright@2016 - 2017 苏州不木网络科技有限公司 版权归不木所有 苏ICP备16004093号-1
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+    document.write(unescape(cnzzStr));
+</script>
+
+</body>
+</html>

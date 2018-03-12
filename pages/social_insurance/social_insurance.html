@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <title>社保大厅</title>
+    <link rel="icon" href="../../image/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../image/favicon.ico" type="image/x-icon"/>
+
+    <!--jquery 引用-->
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <!--bootstrap样式-->
+    <link href="../../css/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/plugins/bootstrap/bootstrap.min.js"></script>
+    <!--弹框-->
+    <link href="../../css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <script src="../../js/plugins/toastr/toastr.min.js"></script>
+    <!--公共-->
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/bumu/operate.css" rel="stylesheet">
+    <link href="../../css/bumu/header.css" rel="stylesheet">
+    <link href="../../css/bumu/social_footer.css" rel="stylesheet">
+    <!--<link href="../../css/bumu/footer.css" rel="stylesheet">-->
+    <script src="../../js/common.js"></script>
+    <script src="../../js/bumu/placeholder.js"></script>
+    <script src="../../js/bumu/bumu.js"></script>
+    <script src="../../js/bumu/operate.js"></script>
+    <script src="../../js/bumu/header.js"></script>
+    <script src="../../js/bumu/social_footer.js"></script>
+    <!--<script src="../../js/bumu/footer.js"></script>-->
+    <!--本页面-->
+    <link href="../../css/pages/social_insurance.css" rel="stylesheet">
+    <script src="../../js/pages/social_insurance.js"></script>
+
+</head>
+<body>
+
+<header>
+
+    <div class="row line">
+        <div class="col-xs-3">您好，欢迎光临不木官网！</div>
+
+        <div class="col-xs-3 pull-right">
+            <span class="txt" onclick="header.goKeySass()">K-Saas平台</span>
+            <span class="btn btn-sm btn-primary pull-right" onclick="header.goTrailApply()">申请试用</span>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="cpy_info col-xs-3" data-type="index" onclick="header.goIndex()">
+            <img class="cpy_logo" src="../../image/logo.png"/>
+            <span class="cpy_name">招才进宝</span>
+        </div>
+
+        <div class="navbar_container col-xs-9">
+
+            <div class="col-xs-2 navbar-btn index" data-type="index">
+                首页
+            </div>
+
+            <div class="col-xs-2 navbar-btn social active" data-type="social">
+                社保大厅
+            </div>
+
+            <div class="col-xs-2 navbar-btn entry" data-type="entry">
+                一键入职
+            </div>
+
+            <div class="col-xs-2 navbar-btn commerce" data-type="commerce">
+                商业保险
+            </div>
+
+            <div class="col-xs-2 navbar-btn salary" data-type="salary">
+                薪资筹划
+            </div>
+
+            <div class="col-xs-2 navbar-btn about_us" data-type="about_us">
+                关于我们
+            </div>
+
+            <!--<div class="col-xs-2 cpy_phone">-->
+            <!--<span>18762875446（孙经理）</span>-->
+            <!--</div>-->
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="content">
+
+    <div class="border_b block_1">
+
+        <div class="col-xs-5 col-xs-offset-1 center social_info_intro" style="">
+
+            <div class="col-xs-6 soin_corp item">
+
+                <div class="name">
+                    企业社保
+                </div>
+
+                <div class="fee">29.9元起/月</div>
+
+                <div class="txt">
+                    缴纳的人数越多优惠越大
+                </div>
+
+            </div>
+
+            <div class="col-xs-6 soin_per item">
+
+                <div class="name">
+                    个人社保
+                </div>
+
+                <div class="fee">1200元起/年</div>
+
+                <div class="txt">
+                    社保不断缴,分分钟搞定
+                </div>
+
+
+            </div>
+
+            <div class="col-xs-12">
+
+                <div class="btn btn-orange btn_apply" onclick="social_insurance.goApply1();">
+                    马上申请
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block border_b block_2">
+
+        <div class="title_container">
+            <div class="title">轻松5步搞定社保代缴</div>
+        </div>
+
+        <div class="step_list">
+
+            <div class="step_item step_1">
+
+                <div class="step_head">
+                    <span class="step_no">STEP.1</span>
+                </div>
+
+                <div class="step_content">
+                    <div class="step_tl">提交信息</div>
+                    <div class="step_sec">在线填写信息</div>
+                </div>
+
+            </div>
+
+            <div class="step_item step_2">
+
+                <div class="step_head">
+                    <span class="step_no">STEP.2</span>
+                </div>
+
+                <div class="step_content">
+                    <div class="step_tl">客服问访</div>
+                    <div class="step_sec">1分钟内客服问访</div>
+                </div>
+
+            </div>
+
+            <div class="step_item step_3">
+
+                <div class="step_head">
+                    <span class="step_no">STEP.3</span>
+                </div>
+
+                <div class="step_content">
+                    <div class="step_tl">准备材料</div>
+                    <div class="step_sec">
+                        客户按说明清单
+                        提供参保材料
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="step_item step_4">
+
+                <div class="step_head">
+                    <span class="step_no">STEP.4</span>
+                </div>
+
+                <div class="step_content">
+                    <div class="step_tl">签订合同</div>
+                    <div class="step_sec">
+                        双方签订社保代缴合同，
+                        并支付代缴金额
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="step_item step_5">
+
+                <div class="step_head">
+                    <span class="step_no">STEP.5</span>
+                </div>
+
+                <div class="step_content">
+                    <div class="step_tl">完成</div>
+                    <div class="step_sec">
+                        招才进宝工作人员开始办理手续，
+                        并与客户保持进度反馈
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block border_b block_3 bg_color_grey_f5">
+
+        <div class="title_container">
+            <div class="title">招才进宝，专注为中小企业提供互联网定制化社保服务</div>
+        </div>
+
+        <div class="user_case_container">
+
+            <div class="tl">
+                用户案例
+            </div>
+
+            <div class="user_case_list row">
+
+                <div class="col-xs-6 item">
+
+                    <div class="col-xs-4 img">
+                        <img src="../../image/social_insurance/user_case_1.png">
+                    </div>
+
+                    <div class="col-xs-8 case_info">
+
+                        <div class="type">
+                            企业HR
+                        </div>
+
+                        <div class="sec">
+                            <p>苏州智合健医疗科技有限公司</p>
+                            <p>人事经理:田萍</p>
+                        </div>
+
+                        <div class="message">
+                            跟招才进宝合作两年了，<br>
+                            未来的打算是继续长期合作。<br>
+                            感谢招才进宝提供的社保代缴服务，<br>
+                            让公司从费时费力的社保缴纳工作中解脱出来，<br>
+                            让企业更加专注于业务拓展，更好地冲刺未来。
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xs-6 item">
+
+                    <div class="col-xs-4 img">
+                        <img src="../../image/social_insurance/user_case_2.png">
+                    </div>
+
+                    <div class="col-xs-8 case_info">
+
+                        <div class="type">
+                            企业HR
+                        </div>
+
+                        <div class="sec">
+                            <p>苏州绿海投资咨询服务有限公司</p>
+                            <p>总经理:王燕飞</p>
+                        </div>
+
+                        <div class="message">
+                            招才进宝，用更专业的态度为中小型企业<br>
+                            提供互联网定制化社保服务！
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xs-6 item">
+
+                    <div class="col-xs-4 img">
+                        <img src="../../image/social_insurance/user_case_3.png">
+                    </div>
+
+                    <div class="col-xs-8 case_info">
+
+                        <div class="type">
+                            个人
+                        </div>
+
+                        <div class="sec">
+                            <p>因离职导致社保断缴</p>
+                            <p>苏州白领李女士</p>
+                        </div>
+
+                        <div class="message">
+                            因为离职原因，社保断缴了3个月，<br>
+                            感谢招才进宝贴心服务成功补缴！
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xs-6 item">
+
+                    <div class="col-xs-4 img">
+                        <img src="../../image/social_insurance/user_case_4.png">
+                    </div>
+
+                    <div class="col-xs-8 case_info">
+
+                        <div class="type">
+                            个人
+                        </div>
+
+                        <div class="sec">
+                            <p>北京某个人创业者</p>
+                            <p>王先生</p>
+                        </div>
+
+                        <div class="message">
+                            作为一个正在创业中的自由职业者，<br>
+                            选择一家靠谱的公司代缴社保非常重要。<br>
+                            经过朋友介绍选择了招才进宝，<br>
+                            从前期咨询回复到后期社保代缴<br>
+                            他们的服务都让我十分满意！
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block border_b block_4">
+
+        <div class="row ">
+
+            <div class="col-xs-4 item">
+
+                <div class="img">
+                    <img src="../../image/social_insurance/service_img_1.png">
+                </div>
+
+                <div class="tl">
+                    覆盖全国400+城市网点，<br>
+                    统一服务规范
+                </div>
+
+                <ul class="info">
+                    <li>100+城市直营，去除繁琐中间环节，保证服务效率</li>
+                    <li>优质服务团队，坚持服务为王</li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-4 item">
+
+                <div class="img">
+                    <img src="../../image/social_insurance/service_img_2.png">
+                </div>
+
+                <div class="tl">
+                    拒绝低价恶性竞争，<br>
+                    注重品质
+                </div>
+
+                <ul class="info">
+                    <li>专业社保专家，为企业量身定制社保方案</li>
+                    <li>合作流程标准规范，双方签过合同再缴费</li>
+                    <li>一次性收费，后期无任何重复收费项</li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-4 item">
+
+                <div class="img">
+                    <img src="../../image/social_insurance/service_img_3.png">
+                </div>
+
+                <div class="tl">
+                    保姆式专业客服贴心，<br>
+                    1对1服务
+                </div>
+
+                <ul class="info">
+                    <li>售前售后解答您的所有疑问</li>
+                    <li>交保前细心对账，代您跑腿</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block  block_5 bg_color_grey_f5">
+
+        <div class="tl">
+            常见问题
+        </div>
+
+        <div class="q_list">
+
+            <div class="item">
+
+                <div class="q_name">
+                    【1】可办理社保代缴城市？
+                </div>
+
+                <div class="q_answer">
+                    北京，上海，广州，深圳，武汉，南京，杭州，苏州，无锡，昆山，
+                    常熟，张家港，郑州，大连，青岛等全国大部分城市。
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="q_name">
+                    【2】企业和个人社保代缴具体办理细节？
+                </div>
+
+                <div class="q_answer">
+
+                    • 企业社保代缴办理流程<br>
+                    【首次合作】<br>
+                    1.在线申请或直接电话咨询。<br>
+                    2.客服回访确定缴纳信息，签订企业社保代缴合同（可邮寄或当面签署）<br>
+                    3.根据客服指导提供参保员工的社保代缴相关材料<br>
+                    4.支付当月员工总社保费用<br>
+                    【后续合作】<br>
+                    1.每月提供增减员表以及新增员工的身份证正反面照片（办理社保卡还需要提供2寸白底照片，须邮寄）<br>
+                    2.根据当月缴纳社保人数向本公司对公账户支付社保费用<br>
+                    • 个人社保代缴办理流程<br>
+                    【首次合作】<br>
+                    1.在线申请或直接电话咨询。<br>
+                    2.客服回访确定缴纳信息，签订个人社保代缴合同（可邮寄或当面签署）<br>
+                    3.根据客服指导提供社保代缴需要的相关材料<br>
+                    4.支付相关费用<br>
+                    【后续合作】<br>
+                     根据选择的合作月份向本公司对公账户支付社保费用
+
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="q_name">
+                    【3】员工如何查询缴费状态？
+                </div>
+
+                <div class="q_answer">
+
+                    【电话查询】拨打电话12333，咨询官方客服进行了解；<br>
+                    【网上查询】登录工作所在地社会保险基金管理中心官网输入个人编号和身份证号即可查询。
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block  block_6 center">
+
+        <div class="tl">
+            如果您有社保代缴需求，请留下您的联系方式，客服人员将尽快联系你
+        </div>
+
+        <div class="apply_container">
+
+            <div class="row">
+                <i class="apply_user"></i>
+                <input class="form-control user_name" maxlength="8" placeholder="请输入您的姓名">
+            </div>
+
+            <div class="row">
+                <i class="apply_phone"></i>
+                <input class="form-control user_phone" maxlength="11" placeholder="请输入您的手机号"
+                       onkeyup="this.value=this.value.replace(/\D/g,'')">
+            </div>
+
+            <div class="row">
+                <i class="apply_corp"></i>
+                <input class="form-control user_corp" placeholder="请输入企业名称（选填）">
+            </div>
+
+            <i style="display: block;width:100%;background-color: #999999;height:1px;"></i>
+
+            <div class="btn btn-blue btn_submit" onclick="social_insurance.applySubmit()">
+                提 &nbsp; 交
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<footer>
+
+    <div class="foot_1">
+
+        <div class="side left_side col-xs-5">
+
+            <div class="tl">
+                关于我们
+            </div>
+
+            <div class="info">
+
+                <div class="line about_us" data-type="about_us">关于不木</div>
+                <div class="line join_us" data-type="join_us">加入不木</div>
+                <div class="line contact_phone">
+                    0512-67903207 <br>
+                    18762875446（孙经理）
+                </div>
+                <div class="line email">support@bumuyun.com</div>
+                <div class="line address">苏州工业园区东平街266号</div>
+
+            </div>
+
+        </div>
+
+        <div class="side right_side col-xs-7">
+
+            <div class="tl">
+                产品频道
+            </div>
+
+            <div class="info row">
+
+                <div class="item" data-type="social">
+                    <div class="func_img">
+                        <img src="../../image/footer/icon_social.png"/>
+                    </div>
+                    <div class="func_name">社保大厅</div>
+                </div>
+
+                <div class="item" data-type="commerce">
+                    <div class="func_img">
+                        <img src="../../image/footer/icon_commerce.png"/>
+                    </div>
+                    <div class="func_name">商业保险</div>
+                </div>
+
+                <div class="item" data-type="entry">
+                    <div class="func_img">
+                        <img src="../../image/footer/icon_entry.png"/>
+                    </div>
+                    <div class="func_name">人事平台</div>
+                </div>
+
+                <div class="item" data-type="salary">
+                    <div class="func_img">
+                        <img src="../../image/footer/icon_salary.png"/>
+                    </div>
+                    <div class="func_name">薪资筹划</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="foot_2">
+
+        <div class="copyright">
+            Copyright@2016 - 2017 苏州不木网络科技有限公司 版权归不木所有 <br>
+        </div>
+
+        <div class="copyright">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001547">
+                <img src="../../image/index/icon_beian.png"/>
+                <p>
+                    苏公网安备 32059002001547号 苏ICP备16004093号-1
+                </p>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="foot_3">
+
+        <div class="row contact_info">
+
+            <div class="col-xs-4 item">
+
+                <div class="head icon_phone center">
+                    <img src="../../image/footer/contact_phone.png">
+                </div>
+
+                <div class="txt">
+                    咨询热线：18762875446（孙经理）<br>
+                    0512-67903207
+                </div>
+
+            </div>
+
+            <div class="col-xs-4 item">
+
+                <div class="head icon_qrCode center">
+                    <img src="../../image/footer/contact_qrCode.png">
+                </div>
+
+                <div class="txt">
+                    扫码添加工作人员微信，获取专业咨询
+                </div>
+
+            </div>
+
+            <div class="col-xs-4 item">
+
+                <div class="head center">
+
+                    <div class="btn btn-orange btn_apply" onclick="social_insurance.goApply2();">
+                        马上申请
+                    </div>
+
+                </div>
+
+                <div class="txt">
+                    在线申请，我们专业顾问将致电联系您
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="icon_up" onclick="social_insurance.toggleContactInfo();">
+                <img src="../../image/footer/icon_up.png">
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<div class="operate_container">
+
+    <!--<div class="opt_item">-->
+    <!--<div class="txt txt_email_info">-->
+    <!--support@bumuyun.com-->
+    <!--</div>-->
+    <!--<img src="../../image/operate/icon_opt_email.png"/>-->
+    <!--</div>-->
+
+    <div class="opt_item">
+        <div class="txt txt_phone_info">
+            18762875446（孙经理）
+        </div>
+        <img src="../../image/operate/icon_opt_phone.png"/>
+    </div>
+
+    <div class="opt_item">
+        <div class="txt txt_qrCode_info">
+            <img src="../../image/icon_footer_qrcode_app.png"/>
+        </div>
+        <img src="../../image/operate/icon_opt_qrcode_app.png"/>
+    </div>
+
+    <div class="opt_item" onclick="soin_calc.calcModalShow()">
+        <img src="../../image/operate/icon_opt_calc.png"/>
+    </div>
+
+    <div class="opt_item" onclick="soin_calc.goTop()">
+        <img src="../../image/operate/icon_opt_toTop.png"/>
+    </div>
+
+</div>
+
+<div class="modal fade calc_container_modal" style="background-color:rgba(0,0,0,0.50);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">社保计算器</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="left_side col-xs-4">
+
+                    <div class="item soin_area_container">
+                        <select class="form-control" onchange="soin_calc.initSoinTypeList()">
+                            <option>参保地</option>
+                            <!--<option>苏州</option>-->
+                            <!--<option>苏州</option>-->
+                        </select>
+                    </div>
+
+                    <div class="item soin_type_container">
+                        <select class="form-control" onchange="soin_calc.SoinTypeInit()">
+                            <option>参保类型</option>
+                            <!--<option>A类</option>-->
+                            <!--<option>B类</option>-->
+                        </select>
+                    </div>
+
+                    <div class="item soin_basic_container">
+                        <input type="text" class="form-control" placeholder="社保基数"
+                               onkeyup="if(isNaN(value))execCommand('undo')"
+                               onblur="soin_calc.checkIsNumber(this)"
+                               maxlength="10"/>
+                    </div>
+
+                    <div class="item fund_container">
+                        <input type="text" class="form-control" placeholder="公积金基数"
+                               onkeyup="if(isNaN(value))execCommand('undo')" maxlength="10"/>
+                    </div>
+
+                    <div class="line">
+                        <div class="btn" onclick="soin_calc.SoinCalc()">计算</div>
+                        <div class="btn btn-default" onclick="soin_calc.calcReset()">重置</div>
+                    </div>
+
+                </div>
+
+                <div class="right_side col-xs-8">
+
+                    <div class="txt">五险一金缴费明细：</div>
+
+                    <div class="pay_info">
+
+                        <div class="head_info col-xs-12">
+
+                            <div class="col-xs-2">类别</div>
+                            <div class="col-xs-2">基数(元)</div>
+                            <div class="col-xs-4">
+                                <div class="txt">个人缴纳</div>
+                                <div>
+                                    <div class="col-xs-6">缴纳比例(%)</div>
+                                    <div class="col-xs-6">缴纳金额(元)</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="txt">企业缴纳</div>
+                                <div>
+                                    <div class="col-xs-6">缴纳比例(%)</div>
+                                    <div class="col-xs-6">缴纳金额(元)</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="content_info col-xs-12">
+
+                            <div class='prompt'>输入左侧数据才能生成明细哦~~</div>
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">养老</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">医疗</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">实业</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">工伤</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">生育</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">公积金</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 "></div>-->
+                            <!--<div class="col-xs-2 "></div>-->
+                            <!--<div class="col-xs-4 per_pay_percentage">-->
+                            <!--<span>个人共缴：</span>-->
+                            <!--<span class="count">$500</span>-->
+                            <!--</div>-->
+                            <!--<div class="col-xs-4 per_pay_percentage">-->
+                            <!--<span>企业共缴：</span>-->
+                            <!--<span class="count">$500</span>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="line col-xs-12">-->
+                            <!--<span class="col-xs-5">-->
+                            <!--<span>总共缴：</span>-->
+                            <!--<span class="count total_count">￥8000</span>-->
+                            <!--</span>-->
+
+                            <!--<span>-->
+                            <!--<span>（其中社保：</span>-->
+                            <!--<span class="count soin_count">￥5000</span>-->
+                            <!--<span>公积金：</span>-->
+                            <!--<span class="count fund_count">￥3000</span>-->
+                            <!--<span>）</span>-->
+                            <!--</span>-->
+                            <!--</div>-->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--</div>-->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<script>
+    document.write(unescape(cnzzStr));
+</script>
+
+
+</body>
+</html>
